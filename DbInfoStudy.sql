@@ -15,3 +15,7 @@ select top 10 * from [dbo].[Person] where [E-postnavn] like '%gde%'
 select top 10 *  from [dbo].[Car_CalculationResource]
 
 select top 10 * from [dbo].[VAElg_ElementGroup]
+
+select top 100  * from [dbo].[VaTa_Task] 
+
+select distinct Ta_TaskTypeName from [dbo].[VaTa_Task]
