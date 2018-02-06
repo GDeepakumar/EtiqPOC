@@ -26,5 +26,21 @@ sp_help [PTO_TNLisenser]
 
 select * from [dbo].[PTO_TNLisenserStud]
 
+select top 100 * from [dbo].[Lp_LicensePool]
 select top 100 * from [dbo].[PTO_TNLisenser]
 select top 100 * from [dbo].[VaLg_Log]
+select top 100 * from [dbo].[ShopModulesLicensing]
+select top 100 * from [dbo].[ShopModuleActivityLog]
+select top 100 * from [dbo].[Lev_LogEvents]
+
+select top 100 * from [dbo].[VaLg_Log]
+select top 100 * from [dbo].[PTO_TNLisenser]
+select top 100 * from [dbo].[Pr_PriceBankLicense]
+select top 100 * from [dbo].[DTD_Verv]
+select top 100 * from [dbo].[VaPa_Payment]
+select top 100 * from [dbo].[In_Invoice]
+select top 100 * from [dbo].[VaTe_Term]
+select top 100 * from [dbo].[Pr_PriceBankLicense]
+
+select top 100 * from PTO_TNLisenser
+sp_help PTO_TNLisenser
