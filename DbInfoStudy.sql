@@ -71,6 +71,7 @@ select top 100 * from [dbo].[Co_Company]
 select top 100 * from [dbo].[UserProfile]
 select top 100 * from [dbo].[Users]
 select top 100 * from [dbo].[VaAdr_Address]
+select top 100 * from [dbo].[VaRe_Responsible]
 
 select top 100 * from Person
 sp_help Person
@@ -82,3 +83,13 @@ Left Join PTD_FirmaDetalj FD On P.PersonId = FD.PersonID
 Left Join PTD_Firma F on FD.FirmaID = F.FirmaID
 
 sp_help PTD_Firma
+sp_help Person
+sp_help [VaTa_Task] 
+
+--TakstNett.dbo.VaRe_Responsible: FK_Task_Responsible
+
+select top 100  * from [dbo].[VaTa_Task] 
+select top 100  * from Person where [E-postnavn]  like '%gde%' 
+--PersonId 20487
+--KundeID  20400
+select top 100 * from [dbo].[VaTa_Task] where [Ta_UserIdent] = 20400
