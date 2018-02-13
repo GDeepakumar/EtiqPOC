@@ -93,3 +93,27 @@ select top 100  * from Person where [E-postnavn]  like '%gde%'
 --PersonId 20487
 --KundeID  20400
 select top 100 * from [dbo].[VaTa_Task] where [Ta_UserIdent] = 20400
+
+select top 100 * from Person
+select top 100 * from PTO_TNLisenser
+
+select P.PersonId,P.Fornavn,L.Lisensnr from Person P
+Right join PTO_TNLisenser L
+on P.PersonID = L.PersonID where P.Fornavn is null
+
+select * from PTO_TNLisenser where Lisensnr = 'TN10287-A83A36A81A82'
+--2572
+select * from Person where PersonID = 2572
+
+sp_help Person
+sp_help [VaTa_Task]
+select top 100 Ta_TaskTypeName,* from  [VaTa_Task]
+
+select P.Fornavn,P.Etternavn,P.Tittel,P.Mobiltelefon,P.[E-postnavn],T.Ta_TaskTypeName,T.Ta_StampFirstUse from  Person P
+inner join [VaTa_Task] T
+on P.KundeID = T.Ta_UserIdent
+
+select * from pbrep_MissionTypePersonUsage
+
+
+
