@@ -5,7 +5,7 @@ go
 
 alter view pbrep_VaTa_Task
 as
-select * from VaTa_Task where Ta_isDeleted = 0
+select top 500 * from VaTa_Task where Ta_isDeleted = 0
 go
 
 
@@ -16,7 +16,7 @@ go
 
 alter view pbrep_Pto_InLisens
 as 
-select  * from PTO_TNLisenser
+select top 500  * from PTO_TNLisenser
 Go
 
 
@@ -26,7 +26,7 @@ go
 
 alter view pbrep_Person
 as 
-select  * from Person
+select top 500  * from Person
 Go
 
 if exists(select 1 from sys.views where name='pbrep_PersonCompany' and type='v')
@@ -35,7 +35,7 @@ go
 
 alter view pbrep_PersonCompany
 as 
-select P.KundeId,P.PersonId,FD.FirmaId,F.FirmaNavn,F.FirmaAdr,F.FirmaPostNr,F.FirmaPostSted,F.FirmaKommune,F.FirmaFylke from Person P 
+select top 500 P.KundeId,P.PersonId,FD.FirmaId,F.FirmaNavn,F.FirmaAdr,F.FirmaPostNr,F.FirmaPostSted,F.FirmaKommune,F.FirmaFylke from Person P 
 Left Join PTD_FirmaDetalj FD On P.PersonId = FD.PersonID 
 Left Join PTD_Firma F on FD.FirmaID = F.FirmaID
 go
